@@ -55,8 +55,8 @@ pipeline {
 steps{
   sh 'sudo chmod 600 ./terraform-files/Staragile.pem'    
 
-  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem deployment.yml ubuntu@3.88.179.19:/home/ubuntu/'
-  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem service.yml ubuntu@3.88.179.19:/home/ubuntu/'
+  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem deployment.yml ubuntu@34.247.6.133:/home/ubuntu/'
+  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem service.yml ubuntu@34.247.6.133:/home/ubuntu/'
 script{
   try{
   sh 'ssh -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem ubuntu@3.88.179.19 kubectl apply -f .'
