@@ -53,7 +53,7 @@ pipeline {
     }
     stage('deploy kubernetes'){
 steps{
-  sh 'sudo chmod 600 ./terraform_files/Staragile.pem'    
+  sh 'sudo chmod 600 ./terraform-files/Staragile.pem'    
 
   sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform_files/Staragile.pem deployment.yml ubuntu@3.88.179.19:/home/ubuntu/'
   sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform_files/Staragile.pem service.yml ubuntu@3.88.179.19:/home/ubuntu/'
