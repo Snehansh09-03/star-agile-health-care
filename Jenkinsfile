@@ -56,7 +56,7 @@ steps{
   sh 'sudo chmod 600 ./terraform-files/Staragile.pem'    
 
   sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem deployment.yml ubuntu@54.216.120.143:/home/ubuntu/'
-  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem service.yml ubuntu@554.216.120.143:/home/ubuntu/'
+  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem service.yml ubuntu@54.216.120.143:/home/ubuntu/'
 script{
   try{
   sh 'ssh -o StrictHostKeyChecking=no -i ./terraform-files/Staragile.pem ubuntu@54.216.120.143 kubectl apply -f .'
