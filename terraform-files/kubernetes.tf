@@ -4,7 +4,7 @@ region = "eu-west-1"
 resource "aws_instance" "kubernetes-server" {
 ami = "ami-0bc691261a82b32bc"
 instance_type = "t3.medium"
-vpc_security_group_ids =["ssg-0c7b73297c52807d3"]
+vpc_security_group_ids =["sg-0c7b73297c52807d3"]
 key_name = "Staragile"
   root_block_device {
       volume_size = 15
